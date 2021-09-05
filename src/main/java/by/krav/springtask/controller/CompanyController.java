@@ -51,7 +51,7 @@ public class CompanyController {
     }
 
 
-                        ////    ADD COMPANY    ////
+                        /////    ADD COMPANY    /////
     @RequestMapping(value = {"/addcompany"}, method = RequestMethod.GET)
     public ModelAndView showAddPersonPage(Model model) {
         ModelAndView modelAndView = new ModelAndView("addcompany");
