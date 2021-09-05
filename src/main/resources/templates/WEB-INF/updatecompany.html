@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Update Company</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div class="container">
+    <h1>New Company:</h1>
+    <form th:action="@{/updatecompany}"
+          th:object="${companyform}" method="POST">
+        <p>New name:
+        <input type="text" class="textName" placeholder="Name" th:field="*{name}" />
+        </p>
+        <p> New manager:
+            <input type="text" class="textManager" placeholder="Manager" th:field="*{manager}" />
+        </p>
+        <input class ="myButton" type="submit" value="Update" />
+    </form>
+</div>
+</body>
+</html>

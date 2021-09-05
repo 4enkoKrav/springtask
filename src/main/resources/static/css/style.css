@@ -1,0 +1,87 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital@1&display=swap');
+
+body{
+font-family: 'Besley', serif;
+font-weight: 400;
+line-height: 1.5em;
+color: indianred;
+background-color: bisque;
+}
+
+h1{
+    font-size: 3em;
+    font-weight: 400;
+    line-height: 1.3em;
+    text-align: center;
+    color: brown;
+}
+
+h2{
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1em;
+    text-align: center;
+    color: cadetblue;
+    display: block;
+    padding-bottom: 2em;
+}
+
+h2 a{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+
+.myButton{
+    /* remove default behavior */
+    appearance:none;
+    -webkit-appearance:none;
+
+    /* usual styles */
+    padding:10px;
+    border:none;
+    background-color:#3F51B5;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:100%;
+}
+
+.textName, .textManager {
+    border-radius:10px;
+    font-size: 15px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border: 3px solid #3F51B5;
+}
+
+.container {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    border-top: 5px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-collapse: collapse;
+    outline: 3px solid #ffd300;
+    font-size: 15px;
+    background: #fff!important;
+}
+.container th {
+    font-weight: bold;
+    padding: 7px;
+    background: #ffd300;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #ffd300;
+}
+.container td {
+    padding: 7px;
+    border: none;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    font-size: 15px;
+}

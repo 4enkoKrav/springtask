@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>IT Companies List</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<h1>IT Companies List</h1>
+<h2> <a href="/addcompany">Add new company</a> </h2>
+<!--<h2> <a href="/deletecompany">Delete company</a> </h2>-->
+<!--<h2> <a href="/updatecompany">Update company</a> </h2>-->
+<br/><br/>
+<div class="container">
+    <table class ="container" bgcolor="#f5f5dc" border="2">
+        <tr>
+            <th><h1>Name</h1></th>
+            <th><h1>Manager</h1></th>
+        </tr>
+
+        <tr th:each ="company : ${companies}">
+            <td th:utext="${company.name}">...</td>
+            <td th:utext="${company.manager}">...</td>
+            <td><a th:href="@{/delete/{name}(name = ${company.name})}" style="color: #ff0000">Delete</a></td>
+            <td>
+                <form th:action="@{/updatecompany}" th:object="${productUpdate}" >
+                    <input type="hidden" th:name="name" th:value="${company.name}">
+                    <input type="hidden" th:name="manager" th:value="${company.manager}">
+                    <input class="myButton" type="submit" style="color:chocolate" value="Edit">
+                </form>
+            </td>
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>
